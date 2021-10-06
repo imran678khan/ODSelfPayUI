@@ -33,8 +33,9 @@
             ],
             "scripts": [
               "src/assets/js/jquery.js",
-              "src/assets/js/sb-admin-2.min.js",
-              "src/assets/js/popper.min.js"
+              "./node_modules/popper.js/dist/umd/popper.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/sb-admin-2.min.js"
             ]
           },
           "configurations": {
@@ -106,8 +107,9 @@
             ],
             "scripts": [
               "src/assets/js/jquery.js",
-              "src/assets/js/sb-admin-2.min.js",
-              "src/assets/js/popper.min.js"
+              "./node_modules/popper.js/dist/umd/popper.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/sb-admin-2.min.js"
             ]
           }
         }
