@@ -12,19 +12,29 @@
     </div>
 
 
-    <div class="col-md-6"><!-- Topbar Search -->
+    <div class="col-md-6">
+     
+
+      <!-- Topbar Search -->
       <form class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search">
           <div class="input-group">
-              <div class="input-group-prepend">
-                <button class="btn btn-outline-secondary dropdown-toggle border-lightgrey" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All</button>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Primary C/M#</a>
-                  <a class="dropdown-item" href="#">Zoom BNF#</a>
-                  <a class="dropdown-item" href="#">Visa Beneficiary Name</a>
-                  <a class="dropdown-item" href="#">Dependent</a>
-                  <a class="dropdown-item" href="#">Associate Corp</a>
-                  <a class="dropdown-item" href="#">Requested By</a>
+              <div class="input-group-prepend" dropdown>
+
+              
+                  <button id="button-basic" dropdownToggle type="button" class="btn btn-outline-secondary dropdown-toggle border-lightgrey"
+                          aria-controls="dropdown-basic">
+                    All<span class="caret"></span>
+                  </button>
+                  <div id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+                      role="menu" aria-labelledby="button-basic">
+                      <a class="dropdown-item" href="#">Primary C/M#</a>
+                      <a class="dropdown-item" href="#">Zoom BNF#</a>
+                      <a class="dropdown-item" href="#">Visa Beneficiary Name</a>
+                      <a class="dropdown-item" href="#">Dependent</a>
+                      <a class="dropdown-item" href="#">Associate Corp</a>
+                      <a class="dropdown-item" href="#">Requested By</a>
                 </div>
+              
               </div>
               <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">

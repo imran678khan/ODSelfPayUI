@@ -1,0 +1,150 @@
+<div class="container-fluid">
+
+    <table class="table w-100 border-0 st-table">
+        <thead>
+            <tr>
+                <th scope="col">C/M#</th>
+                <th scope="col">BNF#</th>
+                <th scope="col">Visa Beneficiary</th>
+                <th scope="col">Dependent</th>
+                <th scope="col">Associated Corp</th>
+                <th scope="col">Status</th>
+                <th scope="col">Created Date</th>
+                <th scope="col">Requested By</th>
+                <th scope="col">Engagement Agreement</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr class="tbl-row" (click)="toggleDetails($event)" >
+                <td>#</td>
+                <td>#</td>
+                <td>Gabriel Macht</td>
+                <td>Jacinda Barrett</td>
+                <td>JP Morgan</td>
+                <td>Unassigned</td>
+                <td>Nil</td>
+                <td>Nil</td>
+                <td>Select Engagement</td>
+            </tr>
+            <!-- hidden row -->
+            <tr class="row-detail">
+               <td colspan="9">
+                   <div class="row">
+                       <div class="col-md-4 p-0">
+                           <div class="card">
+                               <div class="card-body">
+                                   <h5>H1B Premium Processing</h5>
+                                   <p>Visa Beneficiary: <strong>Rick Hoffman</strong></p>
+                                   <p>Visa Beneficiary Dependent : <strong>Gina Torres</strong></p>
+                                   <p>Government filing fee: <strong>$1030</strong></p>
+                                   <p>Legal & administrative fee: <strong>$150</strong></p>
+                                   <p>Total Value: <strong>$1180</strong></p>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-md-8 pr-0">
+                        <div class="card">
+                            <div class="card-body">
+                                
+                                <div>
+                                    <tabset type="pills">
+                                        <tab heading="Teams">
+                                            <strong>Reassign</strong>
+                                            <p>In case you wish to reassign the members of attorney and/or paralegal, select from the list below.</p>
+
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label for="">Attorney</label>
+                                                    <input type="text" class="form-control" >
+                                                </div>
+                                                <div class="col">
+                                                    <label for="">Paralegal</label>
+                                                    <input type="text" class="form-control" >
+                                                </div>
+                                            </div>
+                                            
+                                        </tab>
+                                        <tab heading="Update Payment">
+                                            <strong>Update payment to proceed ahead.</strong>
+                                            <p>To move ahead with the processing of H1B Premium Processing for the case #CM70589, fill the check details in the fields below.</p>
+                                        </tab>
+                                      </tabset>
+                                  </div> 
+                                
+                         
+                            </div>
+                        </div>
+                       </div>
+                   </div>
+               </td> 
+            </tr>
+
+            <tr class="tbl-row" (click)="toggleDetails($event)" >
+                <td>CM70590</td>
+                <td>BNF724</td>
+                <td>Rick Hoffman</td>
+                <td>Rachael Harris</td>
+                <td>JP Morgan</td>
+                <td>Assigned</td>
+                <td>Aug 31, 2021</td>
+                <td>Amy Acker</td>
+                <td>H1 B Premium Processing</td>
+              
+            </tr>
+            <!-- hidden row -->
+            <tr class="row-detail">
+                <td colspan="9">
+                    <div class="row">
+                        <div class="col-md-4 p-0">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>H1B Premium Processing</h5>
+                                    <p>Visa Beneficiary: <strong>Rick Hoffman</strong></p>
+                                    <p>Visa Beneficiary Dependent : <strong>Gina Torres</strong></p>
+                                    <p>Government filing fee: <strong>$1030</strong></p>
+                                    <p>Legal & administrative fee: <strong>$150</strong></p>
+                                    <p>Total Value: <strong>$1180</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 pr-0">
+                        <div class="card">
+                            <div class="card-body">
+                                
+                                <div>
+                                    <tabset type="pills">
+                                        <tab heading="Teams">
+                                            <strong>Reassign</strong>
+                                            <p>In case you wish to reassign the members of attorney and/or paralegal, select from the list below.</p>
+
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label for="">Attorney</label>
+                                                    <input type="text" class="form-control" >
+                                                </div>
+                                                <div class="col">
+                                                    <label for="">Paralegal</label>
+                                                    <input type="text" class="form-control" >
+                                                </div>
+                                            </div>
+                                            
+                                        </tab>
+                                        <tab heading="Update Payment">
+                                            <strong>Update payment to proceed ahead.</strong>
+                                            <p>To move ahead with the processing of H1B Premium Processing for the case #CM70589, fill the check details in the fields below.</p>
+                                        </tab>
+                                    </tabset>
+                                </div> 
+                                
+                        
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </td> 
+            </tr>
+           
+        </tbody>
+    </table>
+    
+</div>

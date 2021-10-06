@@ -9,6 +9,8 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    //jQuery(document).ready(function(){ alert ('1')})
   }
 
 }
