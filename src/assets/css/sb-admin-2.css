@@ -10229,7 +10229,9 @@ display: none !important;
   height: 2.8rem;
   width: 2.7rem;
 }
-
+.sidebar .nav-item .nav-link img{ opacity:.5; width: 16px; margin-right:10px}
+.sidebar .nav-item .nav-link.active-link img{ opacity:1; border:#fff solid 1px;}
+.sidebar .nav-item .nav-link.active img{ opacity:1;}
 .topbar {
   height: 4.375rem;
 }
@@ -11410,6 +11412,9 @@ body.sidebar-toggled footer.sticky-footer {
   letter-spacing: -0.87px;
   font-style:italic;
   font-size: 29px;
+}
+.logo svg text{
+  font-family: 'Changa One', cursive;
 }
 .logo-text-self {
   color: #00447B;
