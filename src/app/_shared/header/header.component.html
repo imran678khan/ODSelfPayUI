@@ -30,23 +30,23 @@
             </g>
           </g>
         </svg>
-        
-        
+
+
       </div>
     </div>
 
 
     <div class="col-md-6">
-     
+
 
       <!-- Topbar Search -->
       <form class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search">
           <div class="input-group">
               <div class="input-group-prepend" dropdown>
 
-              
+
                   <button id="button-basic" dropdownToggle type="button" class="btn btn-outline-secondary dropdown-toggle border-lightgrey"
-                          aria-controls="dropdown-basic">
+                          aria-controls="dropdown-basic" style="font-weight: normal;  border-right-width: 0;">
                     All<span class="caret"></span>
                   </button>
                   <div id="dropdown-basic" *dropdownMenu class="dropdown-menu"
@@ -58,12 +58,12 @@
                       <a class="dropdown-item" href="#">Associate Corp</a>
                       <a class="dropdown-item" href="#">Requested By</a>
                 </div>
-              
+
               </div>
               <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
                   <button class="btn btn-default btn-lightgrey rounded-0" type="button">
-                      <i class="ti-search"></i>
+                    <img src="../../../assets/img/icon_search.svg" width="18" alt="">
                   </button>
               </div>
           </div>
@@ -75,17 +75,20 @@
           <form class="d-none d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search mr-4">
             <div class="input-group">
 
-                <input type="text" class="form-control  rounded-0" placeholder="Last 7 Days" aria-label="Search" aria-describedby="basic-addon2">
+                <!-- <input type="text" class="form-control  rounded-0" placeholder="Last 7 Days" aria-label="Search" aria-describedby="basic-addon2"> -->
+                <input type="text" ngxDaterangepickerMd [(ngModel)]="selected" [showCustomRangeLabel]="true" [ranges]="ranges" [isInvalidDate] = "isInvalidDate"
+                [showClearButton]="true" class="form-control"/>
+
                 <div class="input-group-append">
                     <button class="btn btn-default btn-lightgrey" type="button">
-                        <i class="ti-calendar"></i>
+                      <img src="../../../assets/img/icon_calendar.svg" width="18" alt="">
                     </button>
                 </div>
             </div>
         </form>
 
         <button class="btn btn-default btn-lightgrey" type="button">
-          <i class="ti-upload"></i>
+          <img src="../../../assets/img/icon_download.svg" width="18" alt="">
         </button>
     </div>
   </div>

@@ -12,6 +12,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FormsModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
+    NgxDaterangepickerMd.forRoot(),
     AppRoutingModule
   ],
   providers: [],
