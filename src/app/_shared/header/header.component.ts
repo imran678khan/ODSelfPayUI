@@ -8,8 +8,8 @@ import { Moment } from 'moment';
 })
 export class HeaderComponent implements OnInit {
 
-
   selected: {start: Moment, end: Moment};
+  searchFilter: string;
 
   maxdate = moment();
   ranges: any = {
@@ -29,8 +29,15 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
+    this.getSearchVal(1, "All");
     //jQuery(document).ready(function(){ alert ('1')})
+
+
   }
 
+  getSearchVal(type: number, filter: string) {
+    console.log(filter);
+
+    this.searchFilter = filter;
+  }
 }

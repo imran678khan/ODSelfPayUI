@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class DashboardComponent implements OnInit {
-  
+
   constructor() { }
 
   showDetails: boolean = false;
@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
   }
 
   toggleDetails(row: any) {
-    /* console.log(row); */
+
     if (this.rowData == row) {
       this.showDetails = !this.showDetails;
     } else {

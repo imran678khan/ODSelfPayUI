@@ -11457,9 +11457,11 @@ table.st-table  tr.tbl-row td:last-child {border-right : 1px solid #E6E6E6;  bor
 table.st-table tr.tbl-row:hover td{ border-color: #00447B;}
 
 table.st-table {border-collapse: separate;  border-spacing: 0 0;}
-table.st-table tr.tbl-row { background-color: #fff;border-radius: 15px; height:55px;  border:1px solid #8f5555; box-shadow: 0px 3px 6px #00000008;}
+table.st-table tr.tbl-row { background-color: #fff;border-radius: 15px; line-height: 3; height:55px;  border:1px solid #8f5555; box-shadow: 0px 3px 6px #00000008;}
 
 table.st-table tr.row-detail .card{ background-color:#F3F5F7; border:none; border-radius: 15px; }
+.md-drppicker.shown { left:-120px !important; top: 67px !important;}
+.md-drppicker.ltr .ranges { float:right !important}
 
 .tab-btn-group .nav.nav-pills .nav-item a { background: #F8FAFB; border: 1px solid #D5D5D5; color: #97A4BE; padding-top: 4px; padding-bottom: 4px;}
 .tab-btn-group .nav.nav-pills .nav-item:first-child a{ border-top-right-radius: 0;border-bottom-right-radius: 0;}

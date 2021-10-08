@@ -15,7 +15,7 @@
             </tr>
         </thead>
         <tbody >
-            <tr class="tbl-row" (click)="toggleDetails($event)" >
+            <tr class="tbl-row" (click)="toggleDetails(1)" >
                 <td>#</td>
                 <td>#</td>
                 <td>Gabriel Macht</td>
@@ -27,7 +27,7 @@
                 <td>Select Engagement</td>
             </tr>
             <!-- hidden row -->
-            <tr class="row-detail">
+            <tr class="row-detail" *ngIf="showDetails">
                <td colspan="9">
                    <div class="row">
                        <div class="col-md-4 p-0">
@@ -79,7 +79,7 @@
                </td>
             </tr>
 
-            <tr class="tbl-row" (click)="toggleDetails($event)" >
+            <tr class="tbl-row" (click)="toggleDetails(2)" >
                 <td>CM70590</td>
                 <td>BNF724</td>
                 <td>Rick Hoffman</td>
@@ -92,7 +92,7 @@
 
             </tr>
             <!-- hidden row -->
-            <tr class="row-detail">
+            <tr class="row-detail" *ngIf="showDetails">
                 <td colspan="9">
                     <div class="row">
                         <div class="col-md-4 p-0">
