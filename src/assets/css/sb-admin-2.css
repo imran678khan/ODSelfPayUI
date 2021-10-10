@@ -2379,7 +2379,7 @@ textarea.form-control {
 
 .btn {
   display: inline-block;
-  font-weight: 600;
+  font-weight: 500;
   color: #858796;
   text-align: center;
   vertical-align: middle;
@@ -2389,8 +2389,8 @@ textarea.form-control {
   user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
-  padding: .50rem 1rem;
-  font-size: 1rem;
+  padding: .58rem 1rem;
+  font-size: 14px;
   line-height: 1.5;
   /* */
   border-radius: 6px;
@@ -11493,11 +11493,14 @@ table.innerTable tr td{ background:#fff; color: #000;}
 .tab-btn-group .nav.nav-pills .nav-item a.active { background: transparent; font-weight: 600; border: 1px solid #D5D5D5; color: #00447B;}
 tab p, tab strong, tab input { color: #00447B;}
 tab label, label.custom-label { color: #00447B; font-weight: 600;}
+label.dark-label {color: #3D3D3D; }
 .float-dropdown { position: absolute; top:20px; right: 20px;}
 .float-dropdown .dropdown-toggle::after { content: none;}
 p.pplushhead { margin-bottom: .3rem; color: #555555;}
 input.icon-search { background-image:url("../img/icon_search.svg"); background-repeat: no-repeat; background-position:  right 10px top 10px;}
 input.icon-calendar { background-image:url("../img/icon_calendar.svg"); background-repeat: no-repeat; background-position:  right 10px top 10px;}
+input.icon-edit { background-image:url("../img/icon_edit.svg"); background-repeat: no-repeat; background-position:  right 10px top 10px;}
+
 .heading-blue { color: #00447B; font-weight: 600;font-size: 18px;}
 span.underline-high { border-bottom: red solid 2px; padding-bottom: 5px;}
 
