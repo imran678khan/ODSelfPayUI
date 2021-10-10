@@ -1,4 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import * as moment from 'moment';
+import { Moment } from 'moment';
 declare var $: any;
 
 @Component({
@@ -9,13 +11,18 @@ declare var $: any;
 
 export class DashboardComponent implements OnInit, AfterViewInit  {
 
-  constructor() { }
-
+  invalidDates: moment.Moment[] = [moment().add(2, 'days'), moment().add(3, 'days'), moment().add(5, 'days')];
+  isInvalidDate = (m: moment.Moment) =>  {
+    return this.invalidDates.some(d => d.isSame(m, 'day') )
+  }
+  selected: {start: Moment, end: Moment};
+  selected_rec: {start: Moment, end: Moment};
   showDetails: boolean = false;
   rowData = {};
 
-  ngOnInit(): void {
+  constructor() { }
 
+  ngOnInit(): void {
 
   }
 

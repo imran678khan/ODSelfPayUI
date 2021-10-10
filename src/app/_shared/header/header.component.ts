@@ -1,5 +1,5 @@
 import { SideBarService } from './../_services/side-bar.service';
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import * as moment from 'moment';
 import { Moment } from 'moment';
 import { DaterangepickerDirective } from 'ngx-daterangepicker-material';
@@ -34,11 +34,8 @@ export class HeaderComponent implements OnInit {
 
 
   constructor(
-    private renderer: Renderer2,
     private sideNavService: SideBarService
-    ) {
-
-  }
+    ) {  }
 
   ngOnInit(): void {
     this.getSearchVal(1, "All");
