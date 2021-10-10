@@ -32,7 +32,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/assets/js/jquery.js",
+              "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js",
               "src/assets/js/sb-admin-2.min.js"
             ]
@@ -105,7 +105,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/assets/js/jquery.js",
+              "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js",
               "src/assets/js/sb-admin-2.min.js"
             ]

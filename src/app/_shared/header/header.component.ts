@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { SideBarService } from './../_services/side-bar.service';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import * as moment from 'moment';
 import { Moment } from 'moment';
 
@@ -25,19 +26,30 @@ export class HeaderComponent implements OnInit {
   isInvalidDate = (m: moment.Moment) =>  {
     return this.invalidDates.some(d => d.isSame(m, 'day') )
   }
+  isShown: Boolean = false;
+  inline = true;
+  @ViewChild('toggleSidebar') toggleSidebar: ElementRef;
 
-  constructor() { }
+  constructor(
+    private renderer: Renderer2,
+    private sideNavService: SideBarService
+    ) {
+
+  }
 
   ngOnInit(): void {
     this.getSearchVal(1, "All");
-    //jQuery(document).ready(function(){ alert ('1')})
-
-
   }
 
   getSearchVal(type: number, filter: string) {
-    console.log(filter);
-
     this.searchFilter = filter;
   }
+
+  clickRange() {
+  }
+
+  public toggleSideBar(){
+    this.sideNavService.toggleSidebar.emit();
+  }
+
 }

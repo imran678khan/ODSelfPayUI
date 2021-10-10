@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+declare var $: any;
 
 @Component({
   selector: 'app-dashboard',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, AfterViewInit  {
 
   constructor() { }
 
@@ -14,6 +15,19 @@ export class DashboardComponent implements OnInit {
   rowData = {};
 
   ngOnInit(): void {
+
+
+  }
+
+  ngAfterViewInit() {
+
+      $('.accordion-toggle').on('click', (index) =>{
+        $('.hide-table-padding').hide();
+        $(this).next('tr').find('.hide-table-padding').show();
+        console.log($(this).next());
+
+
+      });
   }
 
   toggleDetails(row: any) {
@@ -25,4 +39,8 @@ export class DashboardComponent implements OnInit {
     }
     this.rowData = row;
   }
+
+
 }
+
+

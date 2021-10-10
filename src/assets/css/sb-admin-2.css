@@ -4222,6 +4222,7 @@ nav .dropdown-toggle:empty::after {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  border-right: 1px solid #E6E6E6;
 }
 
 .navbar-nav .nav-link {
@@ -10229,7 +10230,7 @@ display: none !important;
   height: 2.8rem;
   width: 2.7rem;
 }
-.sidebar .nav-item .nav-link img{ opacity:.5; width: 16px; margin-right:10px}
+.sidebar .nav-item .nav-link img{ opacity:.5; width: 16px;}
 .sidebar .nav-item .nav-link.active img{ opacity:1;}
 .sidebar .nav-item.active-link .nav-link img{ opacity:1 !important;}
 .sidebar .nav-item.active-link .nav-link { color: #fff;}
@@ -10399,6 +10400,7 @@ display: none !important;
 .sidebar {
   width: 6.5rem;
   min-height: 100vh;
+
 }
 
 .sidebar .nav-item {
@@ -10411,13 +10413,19 @@ display: none !important;
 
 .sidebar .nav-item .nav-link {
   text-align: center;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1.5rem;
   width: 6.5rem;
 }
+.sidebar .nav-item .nav-link:hover {
+  background-color: #f4f4f4;
+}
+
+.sidebar .nav-item.active-link .nav-link:hover { background-color: transparent;}
 
 .sidebar .nav-item .nav-link span {
   font-size: 0.65rem;
   display: block;
+  margin-left: 10px;
 }
 
 .sidebar .nav-item.active .nav-link {
@@ -10547,7 +10555,7 @@ display: none !important;
 
 .sidebar .sidebar-heading {
   text-align: center;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   font-weight: 800;
   font-size: 14px;
   height: 28px;
@@ -10557,7 +10565,7 @@ display: none !important;
 
 @media (min-width: 768px) {
   .sidebar {
-    width: 14rem !important;
+    width: 14rem;
   }
   .sidebar .nav-item .collapse {
     position: relative;
@@ -10583,8 +10591,6 @@ display: none !important;
     display: block;
     width: 100%;
     text-align: left;
-    padding: 1rem;
-    width: 14rem;
   }
   .sidebar .nav-item .nav-link i {
     font-size: 0.85rem;
@@ -11414,6 +11420,7 @@ body.sidebar-toggled footer.sticky-footer {
   letter-spacing: -0.87px;
   font-style:italic;
   font-size: 29px;
+  line-height: 1;
 }
 .logo svg text{
   font-family: 'Changa One', cursive;
@@ -11468,3 +11475,66 @@ table.st-table tr.row-detail .card{ background-color:#F3F5F7; border:none; borde
 .tab-btn-group .nav.nav-pills .nav-item:last-child a{ border-top-left-radius: 0;border-bottom-left-radius: 0;}
 
 .tab-btn-group .nav.nav-pills .nav-item a.active { background: transparent; font-weight: 600; border: 1px solid #D5D5D5; color: #00447B;}
+
+
+/* Table css */
+.hide-table-padding { display: none;}
+tr.hide-table-padding td {
+  padding: 0;
+}
+
+.expand-button {
+	position: relative;
+}
+
+.accordion-toggle .expand-button:after
+{
+  position: absolute;
+  left:.75rem;
+  top: 50%;
+  transform: translate(0, -50%);
+  content: '-';
+}
+.accordion-toggle.collapsed .expand-button:after
+{
+  content: '+';
+}
+
+
+/*Calendar override */
+@media (min-width:768px){
+  .md-drppicker.double {width: 660px !important;padding: 10px 20px  !important;}
+}
+.md-drppicker { border-radius: 6px !important;}
+.md-drppicker td {  opacity: 1 !important;}
+.md-drppicker td, .md-drppicker th { height: 2.5rem !important; color: #000 !important;}
+.md-drppicker td.active, .md-drppicker td.active:hover { background-color: #EB3333 !important;}
+.md-drppicker .btn, .md-drppicker .btn:focus, .md-drppicker .btn:hover { background-color: #00447B  !important; border-radius: 6px   !important; box-shadow: none   !important; font-weight: 500   !important; text-transform: capitalize   !important; font-size: 14px !important; padding-left: 15px !important; padding-right: 15px !important;}
+.md-drppicker td.start-date.end-date { border-radius: 0 !important;}
+
+.md-drppicker .ranges ul li button {font-size: 14px !important; color: #00447B; font-weight: 500;}
+.md-drppicker .ranges ul li button.active { background-color: #00447B !important; color: #fff;}
+
+.md-drppicker th.month {font-size: 18px; color: #00447B;}
+
+.md-drppicker td.available.prev, .md-drppicker th.available.prev, .md-drppicker td.available.next, .md-drppicker th.available.next {
+  background-image: url("../img/icon_cal_arrow_left.svg") !important;
+  background-size: 1em !important;
+  opacity: .3 !important;
+}
+.md-drppicker td.available.next, .md-drppicker th.available.next{
+  transform: rotate(180deg);
+}
+
+
+/* Side bar */
+.sidebar {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.sidebar.is-active { width: auto !important;}
+.sidebar.is-active .nav-item a > span, .sidebar.is-active  .sidebar-heading{ display: none;}
+.sidebar.is-active  .sidebar-sep { display: block;}
+.sidebar .sidebar-sep { display: none;}

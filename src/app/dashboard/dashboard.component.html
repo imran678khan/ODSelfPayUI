@@ -1,5 +1,5 @@
 <div class="container-fluid">
-
+  <div class="table-responsive">
     <table class="table w-100 border-0 st-table">
         <thead>
             <tr>
@@ -15,7 +15,8 @@
             </tr>
         </thead>
         <tbody >
-            <tr class="tbl-row" (click)="toggleDetails(1)" >
+            <!-- <tr class="tbl-row" (click)="toggleDetails(1)" > -->
+              <tr class="accordion-toggle collapsed tbl-row" id="accordion1" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
                 <td>#</td>
                 <td>#</td>
                 <td>Gabriel Macht</td>
@@ -27,7 +28,7 @@
                 <td>Select Engagement</td>
             </tr>
             <!-- hidden row -->
-            <tr class="row-detail" *ngIf="showDetails">
+            <tr class="row-detail ">
                <td colspan="9">
                    <div class="row">
                        <div class="col-md-4 p-0">
@@ -79,7 +80,7 @@
                </td>
             </tr>
 
-            <tr class="tbl-row" (click)="toggleDetails(2)" >
+            <tr class="accordion-toggle collapsed tbl-row" id="accordion2" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
                 <td>CM70590</td>
                 <td>BNF724</td>
                 <td>Rick Hoffman</td>
@@ -92,7 +93,7 @@
 
             </tr>
             <!-- hidden row -->
-            <tr class="row-detail" *ngIf="showDetails">
+            <tr class="row-detail  hide-table-padding" >
                 <td colspan="9">
                     <div class="row">
                         <div class="col-md-4 p-0">
@@ -146,5 +147,5 @@
 
         </tbody>
     </table>
-
+</div>
 </div>
