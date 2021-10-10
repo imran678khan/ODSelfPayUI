@@ -2,7 +2,7 @@
   <div class="row w-100">
     <div class="col d-flex">
       <!-- Sidebar Toggle (Topbar) -->
-      <button id="sidebarToggleTop" class="btn mr-3" (click)="toggleSideBar()" >
+      <button id="sidebarToggleTop" class="btn btn-circle  mr-3" (click)="toggleSideBar()" >
           <i class="ti-menu fs-24"></i>
       </button>
 
@@ -77,11 +77,11 @@
             <div class="input-group">
 
                 <!-- <input type="text" class="form-control  rounded-0" placeholder="Last 7 Days" aria-label="Search" aria-describedby="basic-addon2"> -->
-                <input type="text" id="date-range" ngxDaterangepickerMd  [(ngModel)]="selected" name="daterange" [alwaysShowCalendars]="true" [showCustomRangeLabel]="true" [showClearButton]="true" [ranges]="ranges" [isInvalidDate] = "isInvalidDate"
+                <input type="text" id="date-range" ngxDaterangepickerMd  [(ngModel)]="selected" name="daterange" [alwaysShowCalendars]="true" [showCustomRangeLabel]="true" [showCancel]="true" [ranges]="ranges" [isInvalidDate] = "isInvalidDate"
                  class="form-control" />
 
                 <div class="input-group-append">
-                    <button class="btn btn-default btn-lightgrey" type="button" (click)="clickRange()" >
+                    <button class="btn btn-default btn-lightgrey ngx-daterangepicker-action" type="button" (click)="openDatepicker()" >
                       <img src="../../../assets/img/icon_calendar.svg" width="18" alt="">
                     </button>
                 </div>

@@ -2,6 +2,7 @@ import { SideBarService } from './../_services/side-bar.service';
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import * as moment from 'moment';
 import { Moment } from 'moment';
+import { DaterangepickerDirective } from 'ngx-daterangepicker-material';
 
 @Component({
   selector: 'app-header',
@@ -29,6 +30,8 @@ export class HeaderComponent implements OnInit {
   isShown: Boolean = false;
   inline = true;
   @ViewChild('toggleSidebar') toggleSidebar: ElementRef;
+  @ViewChild(DaterangepickerDirective, { static: false }) pickerDirective: DaterangepickerDirective;
+
 
   constructor(
     private renderer: Renderer2,
@@ -45,11 +48,12 @@ export class HeaderComponent implements OnInit {
     this.searchFilter = filter;
   }
 
-  clickRange() {
-  }
-
   public toggleSideBar(){
     this.sideNavService.toggleSidebar.emit();
+  }
+
+  openDatepicker() {
+    this.pickerDirective.open();
   }
 
 }

@@ -4191,7 +4191,7 @@ nav .dropdown-toggle:empty::after {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem;
 }
 
 .navbar .container,
@@ -10244,6 +10244,7 @@ display: none !important;
   width: 2.5rem;
   padding-top: 9px;
   padding-left: 9px;
+  padding-right: 9px;
   background: transparent;
   margin-left: 10px;
 }
@@ -11468,7 +11469,7 @@ table.st-table tr.tbl-row { background-color: #fff;border-radius: 15px; line-hei
 
 table.st-table tr.row-detail .card{ background-color:#F3F5F7; border:none; border-radius: 15px; }
 .md-drppicker.shown { left:-120px !important; top: 67px !important;}
-.md-drppicker.ltr .ranges { float:right !important}
+.md-drppicker.ltr .ranges { float:right !important; width: 130px;}
 
 .tab-btn-group .nav.nav-pills .nav-item a { background: #F8FAFB; border: 1px solid #D5D5D5; color: #97A4BE; padding-top: 4px; padding-bottom: 4px;}
 .tab-btn-group .nav.nav-pills .nav-item:first-child a{ border-top-right-radius: 0;border-bottom-right-radius: 0;}
@@ -11502,13 +11503,22 @@ tr.hide-table-padding td {
 
 
 /*Calendar override */
+.md-drppicker .ranges ul li button { padding:8px 12px 8px 6px !important;}
+.md-drppicker .buttons{    text-align: right;
+  margin: 0 5px 5px 0;
+  position: absolute;
+  bottom: 15px;
+  width: 150px;
+  right: 0;}
+  .md-drppicker .btn.btn-default { background-color: transparent !important;}
+.md-drppicker .buttons .buttons_input{ display: flex; flex-direction: row-reverse;}
 @media (min-width:768px){
   .md-drppicker.double {width: 660px !important;padding: 10px 20px  !important;}
 }
 .md-drppicker { border-radius: 6px !important;}
 .md-drppicker td {  opacity: 1 !important;}
 .md-drppicker td, .md-drppicker th { height: 2.5rem !important; color: #000 !important;}
-.md-drppicker td.active, .md-drppicker td.active:hover { background-color: #EB3333 !important;}
+.md-drppicker td.active, .md-drppicker td.active:hover { background-color: #EB3333 !important; color:#fff !important}
 .md-drppicker .btn, .md-drppicker .btn:focus, .md-drppicker .btn:hover { background-color: #00447B  !important; border-radius: 6px   !important; box-shadow: none   !important; font-weight: 500   !important; text-transform: capitalize   !important; font-size: 14px !important; padding-left: 15px !important; padding-right: 15px !important;}
 .md-drppicker td.start-date.end-date { border-radius: 0 !important;}
 
