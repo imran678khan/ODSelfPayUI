@@ -11582,3 +11582,10 @@ tr.hide-table-padding td {
 @media (max-width: 768px) {
   .mb-md-10 { margin-bottom: 10px !important;}
 }
+
+.company-logo { margin: auto; background: url('../img/OD_biglogo_sidenav.png') no-repeat; width: 150px; height: 29px;}
+.is-active .company-logo { background: url('../img/OD_smalllogo_sidenav.png') no-repeat; width: 50px; height: 40px;}
+
+#wrapper { overflow:hidden;}
+#sidebar-wrapper, #page-content-wrapper { height: calc(100vh - 95px);}
+#page-content-wrapper { overflow-y: auto;}
