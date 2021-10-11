@@ -13,16 +13,20 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
+import { DocumentComponent } from './pdf/document/document.component';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SideBarComponent,
-    DashboardComponent
+    DashboardComponent,
+    DocumentComponent
   ],
   imports: [
     BrowserModule,
+    NgxExtendedPdfViewerModule,
     BsDropdownModule.forRoot(),
     BrowserAnimationsModule,
     FormsModule,
