@@ -23,9 +23,9 @@ import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
   ],
   imports: [
     BrowserModule,
+    BsDropdownModule.forRoot(),
     BrowserAnimationsModule,
     FormsModule,
-    BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     NgxDaterangepickerMd.forRoot(),
     AppRoutingModule

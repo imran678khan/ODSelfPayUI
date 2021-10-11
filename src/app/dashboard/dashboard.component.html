@@ -51,7 +51,24 @@
                                     <tabset type="pills">
                                         <tab heading="Teams">
 
-                                          <div dorpdown class="float-dropdown">
+
+
+<div class="btn-group float-dropdown" dropdown>
+  <button id="button-basic" dropdownToggle type="button" class="btn  dropdown-toggle"
+          aria-controls="dropdown-basic">
+          <span class="ti-more-alt"></span>
+  </button>
+  <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu  dropdown-menu-right"
+      role="menu" aria-labelledby="button-basic">
+    <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)">Export to spreadsheet (CSV)</a></li>
+    <li role="menuitem"><a class="dropdown-item"  href="javascript:void(0)">Stop Reminder</a></li>
+    <li role="menuitem"><a class="dropdown-item"  href="javascript:void(0)">Refund Payment</a></li>
+    <li role="menuitem"><a class="dropdown-item"  href="javascript:void(0)">Cancel Process</a> </li>
+  </ul>
+  </div>
+
+
+                                          <!-- <div dorpdown class="float-dropdown">
 
                                             <button id="button-basic2" dropdownToggle2 type="button" class="btn dropdown-toggle"
                                                     aria-controls="dropdown-basic2">
@@ -65,7 +82,7 @@
                                                 <a class="dropdown-item"  href="javascript:void(0)">Cancel Process</a>
                                             </div>
 
-                                          </div>
+                                          </div> -->
 
                                           <h5 class="heading-blue mb-4 mt-4">Reassign</h5>
 

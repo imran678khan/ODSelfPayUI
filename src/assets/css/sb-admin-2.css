@@ -10260,7 +10260,9 @@ display: none !important;
 .topbar #sidebarToggleTop:active {
   background-color: #dddfeb;
 }
-
+.topbar #sidebarToggleTop i{
+  color:#00447B;
+}
 .topbar .navbar-search {
   width: 100%;
 }
@@ -11495,6 +11497,7 @@ tab p, tab strong, tab input { color: #00447B;}
 tab label, label.custom-label { color: #00447B; font-weight: 600;}
 label.dark-label {color: #3D3D3D; }
 .float-dropdown { position: absolute; top:20px; right: 20px;}
+.float-dropdown button{ transform: rotate(90deg);}
 .float-dropdown .dropdown-toggle::after { content: none;}
 p.pplushhead { margin-bottom: .3rem; color: #555555;}
 input.icon-search { background-image:url("../img/icon_search.svg"); background-repeat: no-repeat; background-position:  right 10px top 10px;}
