@@ -10258,7 +10258,7 @@ display: none !important;
 .topbar .navbar-search {
   width: 100%;
 }
-
+.fix-height { height: 140px;}
 .topbar .navbar-search input {
   font-size: 1rem;
   height: auto;
