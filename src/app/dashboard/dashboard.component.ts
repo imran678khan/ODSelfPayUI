@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
 import { Moment } from 'moment';
+import { IDropdownSettings } from 'ng-multiselect-dropdown';
 declare var $: any;
 
 @Component({
@@ -22,10 +23,27 @@ export class DashboardComponent implements OnInit, AfterViewInit  {
 
   collapsed1: boolean = true;
   collapsed2: boolean = true;
+  dropdownList: any[] =[];
+  selectedItems : any[] = [];
+
+  dropdownSettings:IDropdownSettings={};
 
   constructor() { }
 
   ngOnInit(): void {
+
+    this.dropdownList = [
+      { item_id: 1, item_text: 'Item1' },
+      { item_id: 2, item_text: 'Item2' },
+      { item_id: 3, item_text: 'Item3' },
+      { item_id: 4, item_text: 'Item4' },
+      { item_id: 5, item_text: 'Item5' }
+    ];
+
+    this.dropdownSettings = {
+      idField: 'item_id',
+      textField: 'item_text',
+    };
 
   }
 
@@ -38,6 +56,14 @@ export class DashboardComponent implements OnInit, AfterViewInit  {
 
 
       });
+  }
+
+
+  onItemSelect(item: any) {
+    console.log(item);
+  }
+  onSelectAll(items: any) {
+    console.log(items);
   }
 
   toggleDetails(row: any) {

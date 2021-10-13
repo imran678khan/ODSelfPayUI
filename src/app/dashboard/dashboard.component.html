@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="table-responsive">
+  <div class="table-responsive" style="height:calc(100vh - 95px);">
     <table class="table w-100 border-0 st-table">
         <thead>
             <tr>
@@ -313,10 +313,20 @@
                                     <div class="row">
                                         <div class="col pr-1">
                                             <label for="" class="custom-label">Agreement</label>
-                                            <select class="form-control" >
+                                            <!-- <select class="form-control" >
                                               <option selected>-Select-</option>
                                               <option value="value-1">value-1</option>
-                                              </select>
+                                              </select> -->
+
+                                              <ng-multiselect-dropdown
+                                                [settings]="dropdownSettings"
+                                                [data]="dropdownList"
+                                                [(ngModel)]="selectedItems"
+                                                (onSelect)="onItemSelect($event)"
+                                                (onSelectAll)="onSelectAll($event)"
+                                              >
+                                              </ng-multiselect-dropdown>
+
                                         </div>
                                         <div class="col d-flex align-items-end">
                                             <button  class="btn btn-primary" routerLink="/document">Review agreement</button>
