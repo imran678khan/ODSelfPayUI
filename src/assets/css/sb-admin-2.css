@@ -1934,8 +1934,9 @@ select.form-control option{ color:#8d9dbe}
 }
 
 .form-control::-webkit-input-placeholder {
-  color: #858796;
+  color: #97A4BE;
   opacity: 1;
+  font-weight: 400;
   /* background-color: #fff; */
 }
 
@@ -1953,23 +1954,12 @@ input:-webkit-autofill {
   display: none;
 }
 
-.form-control::-moz-placeholder {
-  color: #858796;
-  opacity: 1;
-}
-
-.form-control:-ms-input-placeholder {
-  color: #858796;
-  opacity: 1;
-}
-
-.form-control::-ms-input-placeholder {
-  color: #858796;
-  opacity: 1;
-}
-
+.form-control::-moz-placeholder,
+.form-control:-ms-input-placeholder,
+.form-control::-ms-input-placeholder,
 .form-control::placeholder {
-  color: #858796;
+  color: #97A4BE;
+  font-weight: 400;
   opacity: 1;
 }
 
@@ -3126,7 +3116,8 @@ nav .dropdown-toggle:empty::after {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #e3e6f0;
-  border-radius: 0.40rem;
+  box-shadow: 0px 3px 6px #00000024;
+  border-radius: 6px;
 }
 
 .dropdown-menu-left {
@@ -3272,6 +3263,7 @@ nav .dropdown-toggle:empty::after {
 .dropdown-menu[x-placement^="top"], .dropdown-menu[x-placement^="right"], .dropdown-menu[x-placement^="bottom"], .dropdown-menu[x-placement^="left"] {
   right: auto;
   bottom: auto;
+
 }
 
 .dropdown-divider {
@@ -3284,10 +3276,10 @@ nav .dropdown-toggle:empty::after {
 .dropdown-item {
   display: block;
   width: 100%;
-  padding: 0.25rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   clear: both;
-  font-weight: 400;
-  color: #002856;
+  font-weight: 600;
+  color: #00447B;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
@@ -3295,13 +3287,13 @@ nav .dropdown-toggle:empty::after {
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
-  color: #2e2f37;
+  color: #00447B;
   text-decoration: none;
   background-color: #f8f9fc;
 }
 
 .dropdown-item.active, .dropdown-item:active {
-  color: #fff;
+  color: #00447B;
   text-decoration: none;
   /* background-color: #00447b; */
 }
@@ -10274,6 +10266,20 @@ display: none !important;
   padding-bottom: 0;
   padding-left: 20px;
   border: #E6E6E6 solid 1px;
+  background: #fff;
+  font-size: 14px;
+}
+.topsearch-dd{
+  font-weight: normal;
+  border-right-width: 0;
+  background: #ffffff;
+  border-right: #ccc solid 1px;
+  color: #3E3E3E;
+}
+
+.topsearch-dd:active, .topsearch-dd:hover, .topsearch-dd:focus  {
+  background: #fff !important;
+  color: #3E3E3E !important;
 }
 
 .topbar .topbar-divider {
@@ -11469,11 +11475,17 @@ table.st-table  tr.tbl-row td:first-child {border-left: 1px solid #E6E6E6;  bord
 table.st-table  tr.tbl-row td:last-child {border-right : 1px solid #E6E6E6;  border-top-right-radius: 15px;border-bottom-right-radius: 15px;}
 /* hover row */
 table.st-table tr.tbl-row:hover td{ border-color: #00447B;}
+table.st-table  tr.rowhighlight.tbl-row td{ border-color: #00447B;}
 
-table.st-table {border-collapse: separate;  border-spacing: 0 0;}
+
+table.st-table {border-collapse: separate;  border-spacing: 0 15px;}
 table.st-table tr.tbl-row { background-color: #fff;border-radius: 15px; line-height: 3; height:55px;  border:1px solid #8f5555; box-shadow: 0px 3px 6px #00000008;}
 
 table.st-table tr.row-detail .card{ background-color:#F3F5F7; border:none; border-radius: 15px; height: 100%;}
+table.st-table tr.row-detail {
+  height: 100px;
+  transition: width 2s;
+}
 /* Inner Table */
 
 table.innerTable { width:100%; border-collapse: separate;  border-spacing: 0 10px;}

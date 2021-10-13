@@ -16,7 +16,7 @@
         </thead>
         <tbody >
             <!-- <tr class="tbl-row" (click)="toggleDetails(1)" > -->
-              <tr class="accordion-toggle collapsed tbl-row" id="accordion1" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
+              <tr class="tbl-row" (click)="collapsed1=!collapsed1" [ngClass]="!collapsed1? 'rowhighlight' : ''">
                 <td>#</td>
                 <td>#</td>
                 <td>Gabriel Macht</td>
@@ -28,13 +28,17 @@
                 <td>Select Engagement</td>
             </tr>
             <!-- hidden row -->
-            <tr class="row-detail ">
+            <tr class="row-detail " *ngIf="!collapsed1">
                <td colspan="9">
                    <div class="row">
                        <div class="col-md-4 p-0">
                            <div class="card">
                                <div class="card-body">
                                    <h5 class="heading-blue mb-4"><span class="underline-high">H1B</span> Premium Processing</h5>
+                                   <div class="my-3">
+                                    <label for="" class="custom-label dark-label">Case No.</label>
+                                    <input type="text" class="form-control icon-edit" style="max-width: 120px;" value="$100">
+                                  </div>
                                    <p class="pplushhead">Visa Beneficiary: <strong>Rick Hoffman</strong></p>
                                    <p class="pplushhead">Visa Beneficiary Dependent : <strong>Gina Torres</strong></p>
                                    <p class="pplushhead">Government filing fee: <strong>$1030</strong></p>
@@ -53,19 +57,19 @@
 
 
 
-<div class="btn-group float-dropdown" dropdown>
-  <button id="button-basic" dropdownToggle type="button" class="btn  dropdown-toggle"
-          aria-controls="dropdown-basic">
-          <span class="ti-more-alt"></span>
-  </button>
-  <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu  dropdown-menu-right"
-      role="menu" aria-labelledby="button-basic">
-    <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)">Export to spreadsheet (CSV)</a></li>
-    <li role="menuitem"><a class="dropdown-item"  href="javascript:void(0)">Stop Reminder</a></li>
-    <li role="menuitem"><a class="dropdown-item"  href="javascript:void(0)">Refund Payment</a></li>
-    <li role="menuitem"><a class="dropdown-item"  href="javascript:void(0)">Cancel Process</a> </li>
-  </ul>
-  </div>
+                                            <div class="btn-group float-dropdown" dropdown>
+                                              <button id="button-basic" dropdownToggle type="button" class="btn  dropdown-toggle"
+                                                      aria-controls="dropdown-basic">
+                                                      <span class="ti-more-alt"></span>
+                                              </button>
+                                              <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu  dropdown-menu-right"
+                                                  role="menu" aria-labelledby="button-basic">
+                                                <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)">Export to spreadsheet (CSV)</a></li>
+                                                <li role="menuitem"><a class="dropdown-item"  href="javascript:void(0)">Stop Reminder</a></li>
+                                                <li role="menuitem"><a class="dropdown-item"  href="javascript:void(0)">Refund Payment</a></li>
+                                                <li role="menuitem"><a class="dropdown-item"  href="javascript:void(0)">Cancel Process</a> </li>
+                                              </ul>
+                                              </div>
 
 
                                           <!-- <div dorpdown class="float-dropdown">
@@ -222,7 +226,7 @@
                </td>
             </tr>
 
-            <tr class="accordion-toggle collapsed tbl-row" id="accordion2" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+            <tr class="tbl-row" (click)="collapsed2=!collapsed2" [ngClass]="!collapsed2? 'rowhighlight' : ''">
                 <td>CM70590</td>
                 <td>BNF724</td>
                 <td>Rick Hoffman</td>
@@ -235,7 +239,7 @@
 
             </tr>
             <!-- hidden row -->
-            <tr class="row-detail  " >
+            <tr class="row-detail  " *ngIf="!collapsed2">
                 <td colspan="9">
                     <div class="row">
                         <div class="col-md-5 p-0">
@@ -253,7 +257,7 @@
                                       <input type="text" class="form-control icon-edit" value="$1030">
                                   </div>
                                   <div class="col">
-                                      <label for="" class="custom-label dark-label">Legal & administrative fee:</label>
+                                      <label for="" class="custom-label dark-label">Legal Fee:</label>
                                       <input type="text" class="form-control icon-edit" value="$100">
                                   </div>
 

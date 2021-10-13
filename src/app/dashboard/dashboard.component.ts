@@ -20,6 +20,9 @@ export class DashboardComponent implements OnInit, AfterViewInit  {
   showDetails: boolean = false;
   rowData = {};
 
+  collapsed1: boolean = true;
+  collapsed2: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
