@@ -11483,7 +11483,7 @@ table.st-table tr.tbl-row { background-color: #fff;border-radius: 15px; line-hei
 
 table.st-table tr.row-detail .card{ background-color:#F3F5F7; border:none; border-radius: 15px; height: 100%;}
 table.st-table tr.row-detail {
-  height: 100px;
+  /* height: 100px; */
   transition: width 2s;
 }
 /* Inner Table */
@@ -11604,3 +11604,15 @@ tr.hide-table-padding td {
 #wrapper { overflow:hidden;}
 #sidebar-wrapper, #page-content-wrapper { height: calc(100vh - 95px);}
 #page-content-wrapper { overflow-y: auto;}
+
+
+.multiselect-dropdown .dropdown-btn{
+  border: 1px solid #D5D5D5 !important;
+  padding: .6rem !important;
+  background-color: #F8FAFB;
+  border-radius: 0.3rem !important;
+  font-size: 14px;
+  line-height: 1.5 !important;
+  color: #000;
+}
+.multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret:before{border-width: 5px 5px 0 !important; }

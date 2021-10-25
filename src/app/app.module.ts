@@ -16,6 +16,7 @@ import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 import { DocumentComponent } from './pdf/document/document.component';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
     TabsModule.forRoot(),
     NgxDaterangepickerMd.forRoot(),
     NgMultiSelectDropDownModule.forRoot(),
+    ModalModule.forRoot(),
     AppRoutingModule
   ],
   providers: [],

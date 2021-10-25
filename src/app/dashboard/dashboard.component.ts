@@ -1,7 +1,10 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { AfterViewInit, Component, OnInit, TemplateRef } from '@angular/core';
 import * as moment from 'moment';
 import { Moment } from 'moment';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
+
+
 declare var $: any;
 
 @Component({
@@ -28,7 +31,10 @@ export class DashboardComponent implements OnInit, AfterViewInit  {
 
   dropdownSettings:IDropdownSettings={};
 
-  constructor() { }
+  public modalRef: BsModalRef;
+
+
+  constructor(private modalService: BsModalService) { }
 
   ngOnInit(): void {
 
@@ -75,6 +81,17 @@ export class DashboardComponent implements OnInit, AfterViewInit  {
     }
     this.rowData = row;
   }
+
+  reviewAgreement(modalTemplate: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(modalTemplate,
+      {
+        class: 'modal-dialog-centered modal-md',
+        backdrop: 'static',
+        keyboard: true
+      }
+    );
+  }
+
 
 
 }
